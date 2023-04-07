@@ -52,6 +52,7 @@ const Addmovie = () => {
     } 
     return (
         <div>
+            <form onSubmit={add}>
             <section className="text-white body-font relative">
                 <div className="container px-5 py-8 mx-auto">
                     <div className="flex flex-col text-center w-full mb-4">
@@ -65,6 +66,7 @@ const Addmovie = () => {
                                     <input type="text"
                                        id="name" 
                                        name="name" 
+                                       required
                                        className="w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" 
                                        onChange={(e)=>setForm({...form,title:e.target.value})}
                                        />
@@ -76,6 +78,7 @@ const Addmovie = () => {
                                     <input type="text" 
                                       id="year" 
                                       name="year" 
+                                      required
                                       className="w-full  rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" 
                                       onChange={(e)=>setForm({...form,year:e.target.value})}
                                     />
@@ -86,6 +89,7 @@ const Addmovie = () => {
                                     <label htmlFor="image" className="leading-7 text-sm text-white">Image link</label>
                                     <input
                                       name="image" 
+                                      required
                                       className="w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200  text-base outline-none text-gray-700 py-1 px-3 resize-none leading-8 transition-colors duration-200 ease-in-out"
                                       onChange={(e)=>setForm({...form,image:e.target.value})}  
                                     />
@@ -97,6 +101,7 @@ const Addmovie = () => {
                                     <label htmlFor="discription" className="leading-7 text-sm text-white">Discription</label>
                                     <textarea id="discription" 
                                       name="discription" 
+                                      required
                                       className="w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                                       onChange={(e)=>setForm({...form,description:e.target.value})}
                                       >
@@ -104,8 +109,8 @@ const Addmovie = () => {
                                 </div>
                             </div>
                             <div className="p-2 w-full">
-                                <button className="flex mx-auto text-white bg-purple-700 border-0 py-2 px-8 focus:outline-none hover:bg-purple-900 rounded text-lg" 
-                                   onClick={add}>
+                                <button  type='submit' className="flex mx-auto text-white bg-purple-700 border-0 py-2 px-8 focus:outline-none hover:bg-purple-900 rounded text-lg" 
+                                   >
                                   {loading?<Bars height={20} color='white'/>:'Button'}
                                 </button>
                             </div>
@@ -115,6 +120,7 @@ const Addmovie = () => {
                     </div>
                 </div>
             </section>
+            </form>
         </div>
     )
 }

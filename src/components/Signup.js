@@ -42,7 +42,24 @@ const Signup = () => {
 
   const requestOtp = async()=>{
     setLoading(true);
-
+    if(form.name === '' || form.mobile === '' || form.password === ''){
+      swal({
+        text: 'please fill all fields',
+        icon: 'warning',
+        buttons: false,
+        timer:3000,
+      });
+      setLoading(false);
+    }else if(form.mobile.length !== 10 ){
+      swal({
+        text: 'please fill correct mobile no',
+        icon: 'warning',
+        buttons: false,
+        timer:3000,
+      });
+      setLoading(false);
+    }
+    else{
     const quer = query(userRef, where('mobile','==', form.mobile));
     const querySnapShot =  await getDocs(quer);
 
@@ -75,6 +92,7 @@ const Signup = () => {
         });
     }
  }
+}
  const upload = async ()=>{
     try{
       // var salt = bcrypt.genSaltSync(10);
@@ -105,7 +123,7 @@ const Signup = () => {
       })
     } catch(err){
       console.log(err);
-    }    
+    }   
   }
   
 
