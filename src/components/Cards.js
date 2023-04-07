@@ -28,7 +28,7 @@ const Cards = () => {
             return (
               <div key={i} className='font-medium shadow-lg p-2  hover:-translate-y-4 cursor-pointer mt-6 transition-all duration-500'>
                   <Link to={`/detail/${e.id}`}>
-                    <img className='h-96 w-full md:h-72 md:w-44' src={e.image} alt='movie-image'/>
+                    <img className='h-96 w-80 md:h-72 md:w-44' src={e.image} alt='movie-image'/>
                   <div className='ml-2'>
                     <h1>{(e.title).split(':')[0]}</h1>
                     <h1 className='flex items-center'>
