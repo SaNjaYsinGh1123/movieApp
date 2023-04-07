@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: black;
+  color: white;
+}
+
+.header {
+   background-color: rgb(12, 12, 12);
+   max-width: 95%;
+   margin: auto;
+}
+.box_Items {
+  padding: 20px;
+}
+.container_s {
+  max-width: 95%;
+  margin: auto;
+}
