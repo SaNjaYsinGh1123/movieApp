@@ -4,7 +4,7 @@
 
 
 body{
-  background-color: black;
+  background-image: linear-gradient(50deg,#1a212e 0%,#06434e 74%);
   color: white;
 }
 
@@ -20,4 +20,13 @@ body{
 .container_s {
   max-width: 95%;
   margin: auto;
+}
+.header-color{
+  background-image: linear-gradient(-360deg,#1a212e 0%,#173338 74%);
+
+  /* background-color:rgb(16, 16, 16); */
+}
+.poster-color{
+  background-image: linear-gradient(180deg,#054f5c 0%,#054f5c 74%);
+
 }

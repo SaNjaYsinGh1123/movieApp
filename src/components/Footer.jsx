@@ -6,7 +6,7 @@ import React from "react"
 const Footer = () => {
   return (
     <>
-      <footer className='box_Items border-y-2 border-gray-500'>
+      <footer className='box_Items border-y-2 border-gray-500 header-color'>
         <div className='container_s flex justify-center'>
           <p>MovieWorld - All right reserved - Design & Developed by FoxY, Inc</p>
           {/* <div className='social'>
