@@ -31,8 +31,8 @@ const Detail = () => {
          <div>
           {loading ? <div className='h-96 w-full flex justify-center items-center'><ThreeDots color='white'/></div>:
              <div className='p-4 mt-4 w-full flex flex-col justify-center   md:flex-row md:items-start items-center'>
-                <img alt='movie-img' src={data.image} className='h-96 md:sticky md:top-24'/>
-                <div className='w-full ml-0 md:ml-4 md:w-1/2 bg-black'>
+                <img alt='movie-img' src={data.image} className='h-96 mb-2 md:sticky md:top-24'/>
+                <div className='w-full ml-0 md:ml-4 md:w-1/2 bg-black p-2 rounded-md'>
                   <h1 className='text-2xl font-bold text-gray-400'>{data.title} <span className='text-xl'>({data.year})</span></h1>
                   <ReactStars
                     size={25}
